@@ -1,7 +1,6 @@
 package Lesson_1ErrorHandlingInProgramming;
 
 import java.io.File;
-import java.util.Arrays;
 
 public class AppLication {
 
@@ -19,13 +18,17 @@ public class AppLication {
             + "/Exceptions-in-programming-and-their-handling-lectures-"
             + "/Lesson_1ErrorHandlingInProgramming/TestFile")));
     System.out.println(divide(10, 0));
+
+    //Массив размером 10, а запрос на 1000, для просмотра ошибки, и обработки.
+    int[] ints = new int[10];
+    System.out.println(ints[1000]);
   }
 
   //функция деления на ноль
   public static int divide(int a, int b) {
     //обработчик ошибки деления на ноль
     if (b == 0) {
-      return  -1;
+      return -1;
     }
     return a / b;
   }
