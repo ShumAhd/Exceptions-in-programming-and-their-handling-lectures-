@@ -14,7 +14,11 @@ public class AppLication {
   }
   //long-так обозначается размер файла, в функцию передаём объект файл (File file)
   public static long getFileSize(File file){
-    //по умолчанию у файла уже есть информация о размере length
+    //добавим обработчик ошибки, если файл не существует
+    if (!file.exists()) {
+      return -1L;
+    }
     return file.length();
+    //по умолчанию у файла уже есть информация о размере length
   }
 }
