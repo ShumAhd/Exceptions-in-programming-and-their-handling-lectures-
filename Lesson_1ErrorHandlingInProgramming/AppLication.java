@@ -26,7 +26,7 @@ public class AppLication {
   public static int divide(int a, int b) {
     //обработчик ошибки деления на ноль
     if (b == 0) {
-      return -1;
+      throw new RuntimeException("Делить на ноль нельзя");
     }
     return a / b;
   }
