@@ -23,6 +23,10 @@ public class AppLication {
 
   //функция деления на ноль
   public static int divide(int a, int b) {
+    //обработчик ошибки деления на ноль
+    if (b == 0) {
+      return  -1;
+    }
     return a / b;
   }
 
