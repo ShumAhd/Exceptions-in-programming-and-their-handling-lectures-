@@ -18,10 +18,8 @@ public class AppLication {
             + "/Exceptions-in-programming-and-their-handling-lectures-"
             + "/Lesson_1ErrorHandlingInProgramming/TestFile")));
     System.out.println(divide(10, 0));
+    a1();
 
-    //Массив размером 10, а запрос на 1000, для просмотра ошибки, и обработки.
-    int[] ints = new int[10];
-    System.out.println(ints[1000]);
   }
 
   //функция деления на ноль
@@ -41,5 +39,19 @@ public class AppLication {
     }
     return file.length();
     //по умолчанию у файла уже есть информация о размере length
+  }
+
+  public static void a1() {
+    a2();
+  }
+
+  public static void a2() {
+    a3();
+  }
+
+  public static void a3() {
+    //Массив размером 10, а запрос на 1000, для просмотра ошибки в стектрейсе.
+    int[] ints = new int[10];
+    System.out.println(ints[1000]);
   }
 }
